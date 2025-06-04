@@ -7,7 +7,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-[#f5deb3] shadow-md p-4 fixed w-full">
+        <nav className="bg-[#f5deb3] shadow-md p-4 fixed w-full z-[9999]">
             <div className="container mx-auto flex justify-between items-center">
                 <Link href={'/'}>
                     <div className="text-2xl font-bold text-[#713700] flex items-center gap-2">
@@ -19,6 +19,7 @@ const Navbar = () => {
                     <a href="/vedas" className="text-[#713700] font-medium hover:text-[#492401]">Vedic Section</a>
                     <a href="mantrapedia" className="text-[#713700] font-medium hover:text-[#492401]">Mantras</a>
                     <a href="/about-us" className="text-[#713700] font-medium hover:text-[#492401]">About Us</a>
+                    <a href="/yourcontribution" className="text-[#713700] font-medium hover:text-[#492401]">Your Contribution</a>
                 </div>
 
                 <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
