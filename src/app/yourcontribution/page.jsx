@@ -6,13 +6,12 @@ import { Copy, X } from "lucide-react";
 import Image from "next/image";
 
 const YourContribution = () => {
-    // Function to handle copying text to clipboard
     const copyToClipboard = (text) => {
         navigator.clipboard.writeText(text);
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 p-4">
+        <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 p-4 py-16">
             <div className="max-w-7xl mx-auto">
                 <Card className="w-full shadow-2xl border-orange-100">
                     <CardHeader className="border-b border-orange-200 p-8 pb-6 bg-gradient-to-r from-orange-50 to-amber-50">
@@ -21,7 +20,6 @@ const YourContribution = () => {
                     </CardHeader>
 
                     <CardContent className="p-3">
-                        {/* QR Code Section */}
                         <div className="mb-12 flex flex-col items-center ">
                             <div className=" relative h-64 w-64 bg-white p-4 shadow-lg rounded-lg border-2 overflow-hidden border-orange-200 flex items-center justify-center">
                                 <div className="h-48 w-48 bg-orange-50 flex items-center justify-center rounded">

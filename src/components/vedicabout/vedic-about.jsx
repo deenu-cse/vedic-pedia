@@ -31,8 +31,8 @@ const VedicAbout = () => {
                 <br />
                 <br />
                 <div className="text-center mt-10">
-                    <Link href={'/vedas'}>
-                        <button className="bg-[#582b0f] text-white px-7 py-2 text-base rounded-full hover:bg-[#391f0f]">Explore More</button>
+                    <Link href={'/SpiritualTeam'}>
+                        <button className="bg-[#582b0f] text-white px-7 py-2 text-base rounded-full hover:bg-[#391f0f]">Our Spiritual Team </button>
                     </Link>
                 </div>
             </div>

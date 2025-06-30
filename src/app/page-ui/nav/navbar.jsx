@@ -16,10 +16,11 @@ const Navbar = () => {
                     </div>
                 </Link>
                 <div className="hidden md:flex space-x-6">
-                    <a href="/vedas" className="text-[#713700] font-medium hover:text-[#492401]">Vedic Section</a>
-                    <a href="mantrapedia" className="text-[#713700] font-medium hover:text-[#492401]">Mantras</a>
-                    <a href="/about-us" className="text-[#713700] font-medium hover:text-[#492401]">About Us</a>
-                    <a href="/yourcontribution" className="text-[#713700] font-medium hover:text-[#492401]">Your Contribution</a>
+                    <a href="/vedas" className="text-[#713700] font-semibold hover:text-[#492401]">Vedic Section</a>
+                    <a href="mantrapedia" className="text-[#713700] font-semibold hover:text-[#492401]">Mantras</a>
+                    <a href="/about-us" className="text-[#713700] font-semibold hover:text-[#492401]">About Us</a>
+                    <a href="/yourcontribution" className="text-[#713700] font-semibold hover:text-[#492401]">Your Contribution</a>
+                    <a href="/downloadapp" className="text-[#713700] font-semibold hover:text-[#492401]">Get App</a>
                 </div>
 
                 <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
