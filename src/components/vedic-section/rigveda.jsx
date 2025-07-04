@@ -35,6 +35,7 @@ export default function AllVedas() {
             sectionCount: 1,
             prefix: "YV"
         },
+        
         "sam veda": {
             folder: "samvedamandal",
             sectionType: "KANDA",
