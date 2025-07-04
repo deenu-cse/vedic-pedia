@@ -4,7 +4,6 @@ import FourVedas from "./page-ui/fourvedas/page"
 import AskYourQuestion from './page-ui/yourquestion/page'
 import AboutVedicPedia from './page-ui/aboutvedic/page'
 import FaqArticles from './page-ui/faqsarticles/page'
-import Footer from './page-ui/footer/page'
 import VideoClip from '../components/video-clip/featured-clip'
 
 export default function Home() {

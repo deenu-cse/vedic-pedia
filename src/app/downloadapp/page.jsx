@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const DownloadApp = () => {
-    const iosAppLink = "https://www.apple.com/in/app-store/";
+    const iosAppLink = "https://apps.apple.com/app/vedic-pedia/id6746746000";
     const androidAppLink = "https://play.google.com/store";
 
     return (
@@ -19,7 +20,11 @@ const DownloadApp = () => {
                     <h2 className="text-2xl font-semibold text-[#713700] mb-4">Download for iOS</h2>
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                         <div className="w-32 h-32 bg-gray-200 flex items-center justify-center rounded-md">
-                            <span className="text-gray-500 text-sm text-center">iOS QR Code Placeholder</span>
+                            <Image
+                            width={150}
+                            height={150}
+                            src={'/images/appqr.jpg'}
+                            className="w-full object-cover"/>
                         </div>
                         <Button
                             asChild
