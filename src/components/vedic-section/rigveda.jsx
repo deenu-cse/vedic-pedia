@@ -58,10 +58,17 @@ export default function AllVedas() {
 
     const handleSectionSelect = (section, language) => {
         const languageFormatted = language.charAt(0).toUpperCase() + language.slice(1).toLowerCase();
-        const fileName = `Study ${currentVeda.prefix} ${currentVeda.sectionType} ${section} ${languageFormatted}.pdf`;
+        const sectionTypeFormatted =
+            currentVeda.sectionType.charAt(0).toUpperCase() + currentVeda.sectionType.slice(1).toLowerCase();
+
+        const fileName = `Study ${currentVeda.prefix} ${sectionTypeFormatted} ${section} ${languageFormatted}.pdf`;
         const pdfPath = `/pdf/${currentVeda.folder}/${encodeURIComponent(fileName)}`;
+
+        console.log("Opening PDF:", pdfPath); // debugging
+
         window.open(pdfPath, "_blank");
     };
+
 
     return (
         <>
