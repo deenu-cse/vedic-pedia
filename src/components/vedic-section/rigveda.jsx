@@ -3,6 +3,7 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import VedicHero from "../../components/vedic-section/vedic-hero";
 import VedicSectionAbout from "../../components/vedic-section/vedic-section-about";
+import PDFModal from "../pdf-modal";
 
 export default function AllVedas() {
     const params = useParams();
@@ -10,6 +11,9 @@ export default function AllVedas() {
 
     const [selectedLanguage, setSelectedLanguage] = useState(null);
     const [selectedSection, setSelectedSection] = useState(null);
+    const [isPDFModalOpen, setIsPDFModalOpen] = useState(false);
+    const [currentPDFUrl, setCurrentPDFUrl] = useState("");
+    const [currentFileName, setCurrentFileName] = useState("");
 
     const normalizeVedaName = (name) => {
         name = name.toLowerCase().replace(/\s+/g, " ").trim();
@@ -61,7 +65,16 @@ export default function AllVedas() {
         const languageFormatted = selectedLanguage.charAt(0).toUpperCase() + selectedLanguage.slice(1).toLowerCase();
         const fileName = `Study ${currentVeda.prefix} ${currentVeda.sectionType} ${section} ${languageFormatted}.pdf`;
         const pdfPath = `/pdf/${currentVeda.folder}/${encodeURIComponent(fileName)}`;
-        window.open(pdfPath, "_blank");
+        
+        setCurrentPDFUrl(pdfPath);
+        setCurrentFileName(fileName);
+        setIsPDFModalOpen(true);
+    };
+
+    const closePDFModal = () => {
+        setIsPDFModalOpen(false);
+        setCurrentPDFUrl("");
+        setCurrentFileName("");
     };
 
     return (
@@ -99,18 +112,31 @@ export default function AllVedas() {
                 )}
 
                 {selectedLanguage && (
-                    <div className="w-full max-h-screen overflow-y-auto p-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-5">
                         {sections.map((section) => (
                             <button
                                 key={section}
                                 onClick={() => handleSectionSelect(section)}
-                                className="block w-full bg-white text-[#713700] font-semibold text-lg py-3 px-5 mb-3 rounded-lg shadow-sm hover:bg-gray-100"
+                                className="bg-[#f5e6c7] hover:bg-[#d4a276] text-[#713700] p-4 rounded-lg shadow-md transition-colors duration-200"
                             >
-                                {currentVeda.sectionType} {section}
+                                <div className="text-center">
+                                    <div className="text-2xl font-bold mb-2">{section}</div>
+                                    <div className="text-sm">
+                                        {currentVeda.sectionType} {section}
+                                    </div>
+                                </div>
                             </button>
                         ))}
                     </div>
                 )}
+
+                {/* PDF Modal */}
+                <PDFModal
+                    isOpen={isPDFModalOpen}
+                    onClose={closePDFModal}
+                    pdfUrl={currentPDFUrl}
+                    fileName={currentFileName}
+                />
             </div>
         </>
     );
