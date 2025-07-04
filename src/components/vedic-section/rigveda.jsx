@@ -31,11 +31,10 @@ export default function AllVedas() {
         },
         "yajur veda": {
             folder: "yajurvedaandsamveda",
-            sectionType: "MANDAL",
+            sectionType: "Mandal",
             sectionCount: 1,
             prefix: "YV"
         },
-        
         "sam veda": {
             folder: "samvedamandal",
             sectionType: "KANDA",
