@@ -19,9 +19,14 @@ export const metadata: Metadata = {
   title: "Vedic Pedia - Explore the Vedas and Mantras",
   description: "Unlock the wisdom of the Vedas. Listen, read, and explore the eternal knowledge in English and Hindi.",
   icons: {
-    icon: "/images/vh1.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/images/vh1.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: "/images/vh1.png",
   },
 };
+
 
 export default function RootLayout({
   children,
