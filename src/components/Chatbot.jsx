@@ -14,7 +14,7 @@ export default function Chatbot() {
 
     script.onload = () => {
       try {
-        (window as any).voiceflow.chat.load({
+        (window).voiceflow.chat.load({
           verify: { projectID: "670ac09d16b3c8f70b3303e9" },
           url: "https://general-runtime.voiceflow.com",
           versionID: "production",
@@ -28,9 +28,9 @@ export default function Chatbot() {
           },
         });
 
-        (window as any).openChatbot = () => {
+        (window).openChatbot = () => {
           try {
-            (window as any).voiceflow.chat.open();
+            (window ).voiceflow.chat.open();
           } catch (err) {
             console.error("Chatbot not ready yet:", err);
           }
