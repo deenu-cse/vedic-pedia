@@ -1,6 +1,9 @@
+'use client';
 
+import Link from "next/link";
 import { Card } from "../../../components/ui/card";
 import AccordionDemo from "../faqs/page";
+
 
 const FaqsArticles = () => {
     return (
@@ -63,8 +66,16 @@ const FaqsArticles = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-3 mt-4">
-                    <button className="bg-[#492401cb] text-center text-lg font-bold text-white w-full sm:w-[40%] py-2 px-5 rounded-lg">Ask Here</button>
-                    <button className="bg-[#492401] text-center text-lg font-bold text-white w-full sm:w-[40%] py-2 px-5 rounded-lg">Explore More</button>
+                    <button
+                        onClick={() => (window).openChatbot?.()}
+                        className="bg-[#492401cb] text-center text-lg font-bold text-white w-full sm:w-[40%] py-2 px-5 rounded-lg"
+                    >
+                        Ask Here
+                    </button>
+
+                    <Link href={'/about-us'}>
+                        <button className="bg-[#492401] text-center text-lg font-bold text-white w-full py-2 px-5 rounded-lg">Explore More</button>
+                    </Link>
                 </div>
             </div>
         </div>

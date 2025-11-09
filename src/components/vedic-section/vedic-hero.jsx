@@ -33,7 +33,9 @@ const VedicHero = () => {
                 <br />
                 <br />
                 <div className="text-center mt-10">
-                    <button className="bg-[#582b0f] text-white px-7 py-2 text-base rounded-full hover:bg-[#391f0f]">Explore More</button>
+                    <Link href={'/about-us'}>
+                        <button className="bg-[#582b0f] text-white px-7 py-2 text-base rounded-full hover:bg-[#391f0f]">Explore More</button>
+                    </Link>
                 </div>
             </div>
         </>
