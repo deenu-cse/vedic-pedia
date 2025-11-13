@@ -1,3 +1,5 @@
+"use client";
+
 import { Image } from "lucide-react";
 import Link from "next/link";
 
@@ -16,7 +18,7 @@ const HeroSection = () => {
                         <br />
                         <p className="mb-6 text-[#411900] text-base font-medium">Unlock the wisdom of the Vedas.<br />Immerse yourself in the timeless wisdom of the Vedas and ancient spiritual texts.</p>
                         <div className="flex justify-center md:justify-start space-x-4">
-                            <button className="bg-[#582b0f] text-white px-5 py-2 text-lg rounded-lg hover:bg-[#391f0f]">Ask Your Question</button>
+                            <button onClick={() => (window).openChatbot?.()} className="bg-[#582b0f] text-white px-5 py-2 text-lg rounded-lg hover:bg-[#391f0f]">Ask Your Question</button>
                             <Link href={'/vedas'}>
                                 <button className="bg-[#d5b267] text-white px-5 py-2 text-lg rounded-lg hover:bg-[#947739]">Explore Vedas</button>
                             </Link>
