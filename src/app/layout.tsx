@@ -42,7 +42,7 @@ export default function RootLayout({
         <br />
         {children}
         <Footer />
-        <Chatbot /> 
+        {/* <Chatbot />  */}
       </body>
     </html>
   );
