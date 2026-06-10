@@ -1,24 +1,25 @@
 import JoinJourny from "../../components/vedicabout/join-journy"
-import VedicAbout from "../../components/vedicabout/vedic-about"
+import VedicAbout from "../../components/VedicAbout"
 import VedicSecond from "../../components/vedicabout/vedic-second"
 import VedicVision from "../../components/vedicabout/vedic-vision"
 import WhatWeOffer from "../../components/vedicabout/weoffer"
+import Image from "next/image"
 
 const AboutUs = () => {
     return (
         <>
-            <VedicAbout />
+            <VedicAbout pageName="About Us" description="Learn our story..." />
             <div>
                 <VedicSecond />
             </div>
             <div>
-                <VedicVision/>
+                <VedicVision />
             </div>
             <div>
-                <WhatWeOffer/>
+                <WhatWeOffer />
             </div>
             <div>
-                <JoinJourny/>
+                <JoinJourny />
             </div>
         </>
     )

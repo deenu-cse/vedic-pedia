@@ -135,7 +135,7 @@ const AudioCards = () => {
     };
 
     return (
-        <div className="w-full flex flex-col items-center p-5 mx-auto">
+        <div className="w-full flex flex-col items-center p-5 mx-auto pb-0">
             <div className="flex flex-wrap mx-auto justify-center items-center gap-4 mb-5">
                 {Object.keys(vedaData).map((veda) => (
                     <button

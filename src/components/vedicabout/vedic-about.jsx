@@ -3,7 +3,7 @@ import Link from "next/link"
 const VedicAbout = () => {
     return (
         <>
-            <div className="bg-[#EDE6D6] text-white py-20 w-full">
+            <div className="bg-[#EDE6D6] text-white py-20 w-full -mt-8">
                 <div className="container min-w-full mx-auto flex flex-col md:flex-row items-center justify-around">
                     <div className="text-center md:text-left md:w-2/6">
                         <h1 className="text-[#411900] text-4xl font-extrabold">The Vedic Pedia</h1>

@@ -76,9 +76,6 @@ export default function AllVedas() {
                 <VedicHero />
             </div>
             <div>
-                <VedicSectionAbout />
-            </div>
-            <div>
                 <h1 className="text-4xl font-bold text-[#713700] m-5">{correctedVed} - {selectedLanguage || "Select Language"}</h1>
 
                 {!selectedLanguage && (

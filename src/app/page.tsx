@@ -5,11 +5,13 @@ import AskYourQuestion from './page-ui/yourquestion/page'
 import AboutVedicPedia from './page-ui/aboutvedic/page'
 import FaqArticles from './page-ui/faqsarticles/page'
 import VideoClip from '../components/video-clip/featured-clip'
+import DiscoverVedas from '../components/vedicabout/discoverVeda'
 
 export default function Home() {
   return (
     <>
       <HeroSection />
+      <DiscoverVedas/>
       <div>
         <FourVedas />
       </div>
