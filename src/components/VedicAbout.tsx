@@ -1,18 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { Sparkles, ArrowRight } from "lucide-react";
+import {  ArrowRight } from "lucide-react";
 
 interface VedicAboutProps {
   pageName?: string;
-  tagline?: string;
   description?: string;
   showCtas?: boolean;
 }
 
 const VedicAbout = ({
   pageName = "The Vedic Pedia",
-  tagline = "Sanatan Wisdom",
   description = "Immerse yourself in the timeless wisdom of the Vedas and ancient spiritual texts. Sacred sounds, divine vibrations — experience the power of ancient mantras.",
   showCtas = true,
 }: VedicAboutProps) => {

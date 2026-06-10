@@ -3,7 +3,6 @@ import VedicAbout from "../../components/VedicAbout"
 import VedicSecond from "../../components/vedicabout/vedic-second"
 import VedicVision from "../../components/vedicabout/vedic-vision"
 import WhatWeOffer from "../../components/vedicabout/weoffer"
-import Image from "next/image"
 
 const AboutUs = () => {
     return (
