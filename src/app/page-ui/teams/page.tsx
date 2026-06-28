@@ -122,7 +122,7 @@ const TeamsSection = () => {
             Our Team
           </h2>
           <p className="text-[#5B4636] max-w-2xl mx-auto font-['Inter'] font-light">
-            The divine forms and eternal teachers whose wisdom guides Vedic Pedia's path.
+            The divine forms and eternal teachers whose wisdom guides Vedic Pedia&apos;s path.
           </p>
         </div>
 
