@@ -1,5 +1,6 @@
 
 import HeroSection from "./page-ui/hero/page"
+import TeamsSection from "./page-ui/teams/page"
 import FourVedas from "./page-ui/fourvedas/page"
 import AskYourQuestion from './page-ui/yourquestion/page'
 import AboutVedicPedia from './page-ui/aboutvedic/page'
@@ -10,6 +11,7 @@ import DiscoverVedas from '../components/vedicabout/discoverVeda'
 export default function Home() {
   return (
     <>
+      <TeamsSection />
       <HeroSection />
       <DiscoverVedas/>
       <div>
